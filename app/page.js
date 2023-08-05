@@ -97,112 +97,116 @@ const Page = () => {
         dispatch({ type: "SET_DESIGN", payload: result.data() });
       }
 
-      // fetch('api/courses', {
-      //   method: 'GET',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
+      // fetch("api/courses")
+      //   .then((data) => {
+      //     // Iterate over the workspaceData fields and update the corresponding fields in the data
+      //     for (const field in workspaceData) {
+      //       if (data.site_info.hasOwnProperty(field)) {
+      //         data.site_info[field] = workspaceData[field];
+      //       }
+      //     }
 
-      // })
+      //     // Update the site_info section
+      //     for (const field in workspaceData.site_info) {
+      //       if (data.site_info.hasOwnProperty(field)) {
+      //         data.site_info[field] = workspaceData.site_info[field];
+      //       }
+      //     }
 
-      // .then(data => {
+      //     // Update the seo section
 
-      // // Iterate over the workspaceData fields and update the corresponding fields in the data
-      // for (const field in workspaceData) {
-      //   if (data.site_info.hasOwnProperty(field)) {
-      //   data.site_info[field] = workspaceData[field];
-      //   }
-      // }
+      //     for (const field in workspaceData.seoData) {
+      //       if (data.seoData.hasOwnProperty(field)) {
+      //         data.seoData[field] = workspaceData.seoData[field];
+      //       }
+      //     }
 
-      // // Update the site_info section
-      // for (const field in workspaceData.site_info) {
-      //   if (data.site_info.hasOwnProperty(field)) {
-      //     data.site_info[field] = workspaceData.site_info[field];
-      //   }
-      // }
+      //     // Update the header_links section
+      //     if (
+      //       workspaceData.header_links &&
+      //       Array.isArray(workspaceData.header_links)
+      //     ) {
+      //       data.header_links = workspaceData.header_links;
+      //     }
 
-      // // Update the seo section
+      //     // Update the footer_links section
+      //     if (
+      //       workspaceData.footer_links &&
+      //       Array.isArray(workspaceData.footer_links)
+      //     ) {
+      //       data.footer_links = workspaceData.footer_links;
+      //     }
 
-      // for (const field in workspaceData.seoData) {
-      //   if (data.seoData.hasOwnProperty(field)) {
-      //     data.seoData[field] = workspaceData.seoData[field];
-      //   }
-      // }
+      //     // Update the social_links section
+      //     if (
+      //       workspaceData.social_links &&
+      //       Array.isArray(workspaceData.social_links)
+      //     ) {
+      //       data.social_links = workspaceData.social_links;
+      //     }
 
-      // // Update the header_links section
-      // if (workspaceData.header_links && Array.isArray(workspaceData.header_links)) {
-      //   data.header_links = workspaceData.header_links;
-      // }
+      //     // Update the hero section
+      //     for (const field in workspaceData.hero) {
+      //       if (data.hero.hasOwnProperty(field)) {
+      //         data.hero[field] = workspaceData.hero[field];
+      //       }
+      //     }
 
-      // // Update the footer_links section
-      // if (workspaceData.footer_links && Array.isArray(workspaceData.footer_links)) {
-      //   data.footer_links = workspaceData.footer_links;
-      // }
+      //     // Update the top_clients section
+      //     if (
+      //       workspaceData.top_clients &&
+      //       Array.isArray(workspaceData.top_clients)
+      //     ) {
+      //       data.top_clients = workspaceData.top_clients;
+      //     }
 
-      // // Update the social_links section
-      // if (workspaceData.social_links && Array.isArray(workspaceData.social_links)) {
-      //   data.social_links = workspaceData.social_links;
-      // }
+      //     // Update the abovefooter section
+      //     for (const field in workspaceData.abovefooter) {
+      //       if (data.abovefooter.hasOwnProperty(field)) {
+      //         data.abovefooter[field] = workspaceData.abovefooter[field];
+      //       }
+      //     }
 
-      // // Update the hero section
-      // for (const field in workspaceData.hero) {
-      //   if (data.hero.hasOwnProperty(field)) {
-      //     data.hero[field] = workspaceData.hero[field];
-      //   }
-      // }
+      //     // Update the footer section
+      //     for (const field in workspaceData.footer) {
+      //       if (data.footer.hasOwnProperty(field)) {
+      //         data.footer[field] = workspaceData.footer[field];
+      //       }
+      //     }
 
-      // // Update the top_clients section
-      // if (workspaceData.top_clients && Array.isArray(workspaceData.top_clients)) {
-      //   data.top_clients = workspaceData.top_clients;
-      // }
+      //     // Update the exit_intent section
+      //     for (const field in workspaceData.exit_intent) {
+      //       if (data.exit_intent.hasOwnProperty(field)) {
+      //         data.exit_intent[field] = workspaceData.exit_intent[field];
+      //       }
+      //     }
 
-      // // Update the abovefooter section
-      // for (const field in workspaceData.abovefooter) {
-      //   if (data.abovefooter.hasOwnProperty(field)) {
-      //     data.abovefooter[field] = workspaceData.abovefooter[field];
-      //   }
-      // }
+      //     // Update the embeds section
+      //     for (const field in workspaceData.embeds) {
+      //       if (data.embeds.hasOwnProperty(field)) {
+      //         data.embeds[field] = workspaceData.embeds[field];
+      //       }
+      //     }
 
-      // // Update the footer section
-      // for (const field in workspaceData.footer) {
-      //   if (data.footer.hasOwnProperty(field)) {
-      //     data.footer[field] = workspaceData.footer[field];
-      //   }
-      // }
+      //     // Update the aichat section
+      //     for (const field in workspaceData.aichat) {
+      //       if (data.aichat.hasOwnProperty(field)) {
+      //         data.aichat[field] = workspaceData.aichat[field];
+      //       }
+      //     }
 
-      // // Update the exit_intent section
-      // for (const field in workspaceData.exit_intent) {
-      //   if (data.exit_intent.hasOwnProperty(field)) {
-      //     data.exit_intent[field] = workspaceData.exit_intent[field];
-      //   }
-      // }
+      //     // Update the code_injections section
+      //     for (const field in workspaceData.code_injections) {
+      //       if (data.code_injections.hasOwnProperty(field)) {
+      //         data.code_injections[field] =
+      //           workspaceData.code_injections[field];
+      //       }
+      //     }
 
-      // // Update the embeds section
-      // for (const field in workspaceData.embeds) {
-      //   if (data.embeds.hasOwnProperty(field)) {
-      //     data.embeds[field] = workspaceData.embeds[field];
-      //   }
-      // }
-
-      // // Update the aichat section
-      // for (const field in workspaceData.aichat) {
-      //   if (data.aichat.hasOwnProperty(field)) {
-      //     data.aichat[field] = workspaceData.aichat[field];
-      //   }
-      // }
-
-      // // Update the code_injections section
-      // for (const field in workspaceData.code_injections) {
-      //   if (data.code_injections.hasOwnProperty(field)) {
-      //     data.code_injections[field] = workspaceData.code_injections[field];
-      //   }
-      // }
-
-      // console.log('updated data:', data);
-      // console.log('Designresult',result.data());
-
-      // })
-      // .catch((error) => console.error('Error:', error));
+      //     console.log("updated data:", data);
+      //     console.log("Designresult", result.data());
+      //   })
+      //   .catch((error) => console.error("Error:", error));
     };
 
     fetchData();

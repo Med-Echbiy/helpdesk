@@ -1,8 +1,8 @@
-const Navbar = () => {
+const Navbar = ({ data }) => {
   const handleSignOut = () => {
     // Add your SignOut logic here
   };
-
+  console.log(data);
   return (
     <>
       <nav
@@ -17,13 +17,13 @@ const Navbar = () => {
           >
             <img
               id='setlogo'
-              src='https://ssl.gstatic.com/images/branding/googleg/2x/googleg_standard_color_64dp.png'
+              src={data.site_info.setlogo}
               alt='Logo'
               style={{ height: "3rem" }}
             />
             &nbsp; <span>|</span> &nbsp;
             <span id='logotext_extension' className='opacity-75'>
-              Help Center
+              {data.site_info.site_name}
             </span>
           </a>
 

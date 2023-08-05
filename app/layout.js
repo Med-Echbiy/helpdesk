@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
       <AppContextProvider>
         <body className=''>
           <div className='container'>
-            <Navbar />
+            <Navbar data={data} />
             <Hero />
             <br /> <br /> <br /> <br />
             {children}
